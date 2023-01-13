@@ -342,6 +342,8 @@
 -r:"C:/Users/Alumno/Documents/GitHub/AMD/AMD/Library/PackageCache/com.unity.testtools.codecoverage@1.1.1/lib/ReportGenerator/ReportGeneratorMerged.dll"
 -r:"C:/Users/Alumno/Documents/GitHub/AMD/AMD/Library/PackageCache/com.unity.visualscripting@1.7.8/Runtime/VisualScripting.Flow/Dependencies/NCalc/Unity.VisualScripting.Antlr3.Runtime.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/Assembly-CSharp-firstpass.ref.dll"
+-r:"Library/Bee/artifacts/1900b0aE.dag/Rewired_Windows_Functions.ref.dll"
+-r:"Library/Bee/artifacts/1900b0aE.dag/Unity.2D.Sprite.Editor.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/Unity.EditorCoroutines.Editor.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/Unity.Performance.Profile-Analyzer.Editor.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/Unity.PlasticSCM.Editor.ref.dll"
@@ -432,7 +434,6 @@
 "Assets/Rewired/Internal/Scripts/DataStorage/UserDataStore_PlayerPrefs.cs"
 "Assets/Rewired/Internal/Scripts/InputManager.cs"
 "Assets/Rewired/Internal/Scripts/Misc/ExternalTools.cs"
-"Assets/Rewired/Internal/Scripts/Platforms/Windows/Functions/Functions.cs"
 "Assets/TextMesh Pro/Examples & Extras/Scripts/Benchmark01.cs"
 "Assets/TextMesh Pro/Examples & Extras/Scripts/Benchmark01_UGUI.cs"
 "Assets/TextMesh Pro/Examples & Extras/Scripts/Benchmark02.cs"
@@ -467,6 +468,7 @@
 "Assets/TextMesh Pro/Examples & Extras/Scripts/VertexShakeB.cs"
 "Assets/TextMesh Pro/Examples & Extras/Scripts/VertexZoom.cs"
 "Assets/TextMesh Pro/Examples & Extras/Scripts/WarpTextExample.cs"
+"Assets/_Data/Scripts/UI/SelectMenu.cs"
 -langversion:9.0
 /unsafe+
 /deterministic
