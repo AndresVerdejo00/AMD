@@ -155,6 +155,7 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
     <Compile Include="Assets\_Data\Scripts\UI\SelectMenu.cs" />
     <Compile Include="Assets\Rewired\Extras\ControlMapper\Scripts\UIGroup.cs" />
+    <Compile Include="Assets\_Data\Scripts\Manager\PlayerInputManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
@@ -823,13 +824,13 @@
       <Project>{7FF590D7-703F-1F54-521D-6AEF835B362E}</Project>
       <Name>Unity.Services.Core.Environments.Player</Name>
     </ProjectReference>
-    <ProjectReference Include="Unity.VisualScripting.State.Player.csproj">
-      <Project>{4D637901-976A-A19C-0C07-31B8EE3D5BD2}</Project>
-      <Name>Unity.VisualScripting.State.Player</Name>
-    </ProjectReference>
     <ProjectReference Include="Rewired_Windows_Functions.Player.csproj">
       <Project>{268ADDFC-AD60-9C98-594D-CFFDAFCCFD75}</Project>
       <Name>Rewired_Windows_Functions.Player</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.VisualScripting.State.Player.csproj">
+      <Project>{4D637901-976A-A19C-0C07-31B8EE3D5BD2}</Project>
+      <Name>Unity.VisualScripting.State.Player</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

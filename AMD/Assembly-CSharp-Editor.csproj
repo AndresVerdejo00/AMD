@@ -911,6 +911,10 @@
       <Project>{62BEAE9B-7F1C-ED31-4DC0-BDC4D69B041F}</Project>
       <Name>Unity.Timeline.Editor</Name>
     </ProjectReference>
+    <ProjectReference Include="Rewired_Windows_Functions.csproj">
+      <Project>{46BC20F8-18D5-5267-A9C1-DDE4FA60B958}</Project>
+      <Name>Rewired_Windows_Functions</Name>
+    </ProjectReference>
     <ProjectReference Include="Unity.TestTools.CodeCoverage.Editor.csproj">
       <Project>{6E6E53BD-DB01-6CA1-468A-4DBF565B0270}</Project>
       <Name>Unity.TestTools.CodeCoverage.Editor</Name>
@@ -918,10 +922,6 @@
     <ProjectReference Include="Unity.VisualScripting.State.csproj">
       <Project>{588D0697-4CBD-7B47-744F-859914ACB477}</Project>
       <Name>Unity.VisualScripting.State</Name>
-    </ProjectReference>
-    <ProjectReference Include="Rewired_Windows_Functions.csproj">
-      <Project>{46BC20F8-18D5-5267-A9C1-DDE4FA60B958}</Project>
-      <Name>Rewired_Windows_Functions</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -5,16 +5,16 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638092294591494882
-    m_Hash: 3674952836
+      ticks: 638094863379990988
+    m_Hash: 1572157895
   m_LockFileStatus:
     m_FilePath: C:/Users/Alumno/Documents/GitHub/AMD/AMD/Packages/packages-lock.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638092294591714905
-    m_Hash: 3378304858
+      ticks: 638094863380000985
+    m_Hash: 2072832287
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_LocalPackages:

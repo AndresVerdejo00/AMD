@@ -1,11 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class SelectMenu : MonoBehaviour
 {
     [SerializeField]
     private GameObject redBoxStart, redBoxInfo, redBoxExit;
+    [SerializeField]
+    private int numScene;
 
     private int selected;
 
@@ -18,10 +21,14 @@ public class SelectMenu : MonoBehaviour
 
     private void Update()
     {
-        if(Input.GetKeyUp("space"))
+        if (PlayerInputManager.Instance.IsClickSpacePressed())
         {
             ChangeMenuSelected();
+        }else if(PlayerInputManager.Instance.IsClickSpacePressed())
+        {
+            print("cambio");
         }
+
     }
 
     private void ChangeMenuSelected()
