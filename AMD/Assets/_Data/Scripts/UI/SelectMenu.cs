@@ -9,6 +9,8 @@ public class SelectMenu : MonoBehaviour
     private GameObject redBoxStart, redBoxInfo, redBoxExit;
     [SerializeField]
     private int numScene;
+    [SerializeField]
+    private GameObject panelInfo;
 
     private int selected;
 
@@ -24,9 +26,12 @@ public class SelectMenu : MonoBehaviour
         if (PlayerInputManager.Instance.IsClickSpacePressed())
         {
             ChangeMenuSelected();
-        }else if(PlayerInputManager.Instance.IsClickSpacePressed())
+
+        }
+        else if(PlayerInputManager.Instance.IsClickSpaceLongPressed())
         {
-            print("cambio");
+            print("cambio " + selected);
+            
         }
 
     }
@@ -44,6 +49,7 @@ public class SelectMenu : MonoBehaviour
                 redBoxInfo.SetActive(false);
                 redBoxExit.SetActive(true);
                 selected = 3;
+                panelInfo.SetActive(true);
                 break;
             case 3:
                 redBoxExit.SetActive(false);

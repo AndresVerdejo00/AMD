@@ -206,11 +206,14 @@ MonoBehaviour:
         _enabled: 1
         _ruleSets: []
     - _id: 1
-      _name: Player0
-      _descriptiveName: Player0
+      _name: MainPlayer
+      _descriptiveName: 
       _startPlaying: 1
       _defaultJoystickMaps: []
-      _defaultMouseMaps: []
+      _defaultMouseMaps:
+      - _enabled: 1
+        _categoryId: 0
+        _layoutId: 0
       _defaultKeyboardMaps:
       - _enabled: 1
         _categoryId: 0
@@ -240,7 +243,7 @@ MonoBehaviour:
     - _id: 1
       _name: Click
       _type: 1
-      _descriptiveName: Action1
+      _descriptiveName: 
       _positiveDescriptiveName: 
       _negativeDescriptiveName: 
       _behaviorId: 0

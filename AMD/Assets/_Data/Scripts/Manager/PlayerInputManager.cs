@@ -8,8 +8,7 @@ public class PlayerInputManager : MonoBehaviour
     public static PlayerInputManager Instance;
 
     //inputs
-    private const string PRESS_SPACE = "Click";
-    private const string PRESS_MOUSE = "Click";
+    private const string PRESS_CLICK = "Click";
 
     private Player playerInput;
 
@@ -47,7 +46,9 @@ public class PlayerInputManager : MonoBehaviour
         {
             return false;
         }
-        return playerInput.GetButtonDown(PRESS_SPACE);
+
+        //Debug.Log("Input? " + playerInput.GetButtonDown(PRESS_SPACE));
+        return playerInput.GetButtonUp(PRESS_CLICK);
     }
 
     public bool IsClickMousePressed()
@@ -56,7 +57,7 @@ public class PlayerInputManager : MonoBehaviour
         {
             return false;
         }
-        return playerInput.GetButtonDown(PRESS_MOUSE);
+        return playerInput.GetButtonUp(PRESS_CLICK);
     }
 
     public bool IsClickSpaceLongPressed()
@@ -65,7 +66,7 @@ public class PlayerInputManager : MonoBehaviour
         {
             return false;
         }
-        return playerInput.GetButtonLongPress(PRESS_SPACE);
+        return playerInput.GetButtonLongPress(PRESS_CLICK);
     }
 
     public bool IsClickMouseLongPressed()
@@ -74,7 +75,7 @@ public class PlayerInputManager : MonoBehaviour
         {
             return false;
         }
-        return playerInput.GetButtonLongPress(PRESS_MOUSE);
+        return playerInput.GetButtonLongPress(PRESS_CLICK);
     }
 
 }
