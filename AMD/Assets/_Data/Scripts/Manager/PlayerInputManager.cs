@@ -12,7 +12,7 @@ public class PlayerInputManager : MonoBehaviour
 
     private Player playerInput;
 
-    private bool isInputAllowed = true;
+    public bool isInputAllowed = true;
     public bool IsInputAllowed
     {
         set
@@ -69,6 +69,16 @@ public class PlayerInputManager : MonoBehaviour
         return playerInput.GetButtonLongPress(PRESS_CLICK);
     }
 
+    public bool IsClickSpaceUp()
+    {
+        if (!isInputAllowed)
+        {
+            return false;
+        }
+        return playerInput.GetButtonUp(PRESS_CLICK);
+    }
+
+
     public bool IsClickMouseLongPressed()
     {
         if (!isInputAllowed)
@@ -76,6 +86,23 @@ public class PlayerInputManager : MonoBehaviour
             return false;
         }
         return playerInput.GetButtonLongPress(PRESS_CLICK);
+    }
+
+    public double GetTimePressed()
+    {
+        return playerInput.GetButtonTimePressed(PRESS_CLICK);
+
+    }
+
+    public void ResetIsInputAllowed()
+    {
+        StartCoroutine(ResetAllowedInput());
+    }
+
+    IEnumerator ResetAllowedInput()
+    {
+        yield return new WaitForSeconds(0.3f);
+        isInputAllowed = true;
     }
 
 }

@@ -469,6 +469,7 @@
 "Assets/TextMesh Pro/Examples & Extras/Scripts/VertexZoom.cs"
 "Assets/TextMesh Pro/Examples & Extras/Scripts/WarpTextExample.cs"
 "Assets/_Data/Scripts/Manager/PlayerInputManager.cs"
+"Assets/_Data/Scripts/UI/BackToMain.cs"
 "Assets/_Data/Scripts/UI/SelectMenu.cs"
 -langversion:9.0
 /unsafe+
