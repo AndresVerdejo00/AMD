@@ -15,6 +15,7 @@ public class SelectMenu : MonoBehaviour
     [SerializeField]
     private GameObject panelInfo;//panel from menu info
 
+<<<<<<< HEAD
     [SerializeField]
     private Image backgroundImageStart;
     [SerializeField]
@@ -24,6 +25,8 @@ public class SelectMenu : MonoBehaviour
     [SerializeField]
     private Image backgroundImagePanelInfo;
 
+=======
+>>>>>>> daf93d0a94171f55369b8b69781508481559ee78
 
     private int selected;//option to manage switch
     private bool canBackToLobby = false;
@@ -42,6 +45,7 @@ public class SelectMenu : MonoBehaviour
 
     private void Update()
     {
+<<<<<<< HEAD
         //rellenar barra de carga
         if (PlayerInputManager.Instance.IsClickSpace())
         {
@@ -68,6 +72,11 @@ public class SelectMenu : MonoBehaviour
             backgroundImageStart.fillAmount = 0;
             backgroundImageInfo.fillAmount = 0;
             backgroundImageExit.fillAmount = 0;
+=======
+        if (PlayerInputManager.Instance.IsClickSpacePressed() && isMain)
+        {
+            ChangeMenuSelected();
+>>>>>>> daf93d0a94171f55369b8b69781508481559ee78
         }
 
 
@@ -77,8 +86,11 @@ public class SelectMenu : MonoBehaviour
             {
                 SceneManager.LoadScene(numScene);
                 isMain = false;
+<<<<<<< HEAD
 
                 backgroundImageStart.fillAmount = 0;
+=======
+>>>>>>> daf93d0a94171f55369b8b69781508481559ee78
             }
 
             if(selected == 2 && canBackToLobby)
@@ -88,14 +100,18 @@ public class SelectMenu : MonoBehaviour
                 panelMain.SetActive(!panelMain.activeInHierarchy);
                 panelInfo.SetActive(!panelInfo.activeInHierarchy);
                 isMain = false;
+<<<<<<< HEAD
 
                 backgroundImageInfo.fillAmount = 0;
+=======
+>>>>>>> daf93d0a94171f55369b8b69781508481559ee78
             }
 
             if(selected == 3)
             {
                 Application.Quit();
                 isMain = false;
+<<<<<<< HEAD
 
                 backgroundImageExit.fillAmount = 0;
             }
@@ -105,6 +121,14 @@ public class SelectMenu : MonoBehaviour
         {
             canBackToLobby = true;
             backgroundImageStart.fillAmount += (Time.deltaTime / PlayerInputManager.numLongPresTime);
+=======
+            }
+        }
+
+        if (PlayerInputManager.Instance.IsClickSpaceUp())
+        {
+            canBackToLobby = true;
+>>>>>>> daf93d0a94171f55369b8b69781508481559ee78
             isMain = true;
         }
 
