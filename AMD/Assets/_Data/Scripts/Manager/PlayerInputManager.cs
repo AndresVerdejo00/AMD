@@ -13,12 +13,9 @@ public class PlayerInputManager : MonoBehaviour
     private Player playerInput;
 
     public bool isInputAllowed = true;
-<<<<<<< HEAD
 
     public static float numLongPresTime;
 
-=======
->>>>>>> daf93d0a94171f55369b8b69781508481559ee78
     public bool IsInputAllowed
     {
         set
@@ -84,16 +81,6 @@ public class PlayerInputManager : MonoBehaviour
         return playerInput.GetButtonLongPress(PRESS_CLICK);
     }
 
-    public bool IsClickSpaceUp()
-    {
-        if (!isInputAllowed)
-        {
-            return false;
-        }
-        return playerInput.GetButtonUp(PRESS_CLICK);
-    }
-
-
     public bool IsClickMouseLongPressed()
     {
         if (!isInputAllowed)
@@ -103,14 +90,6 @@ public class PlayerInputManager : MonoBehaviour
         return playerInput.GetButtonLongPress(PRESS_CLICK);
     }
 
-<<<<<<< HEAD
-=======
-    public double GetTimePressed()
-    {
-        return playerInput.GetButtonTimePressed(PRESS_CLICK);
-
-    }
->>>>>>> daf93d0a94171f55369b8b69781508481559ee78
 
     public void ResetIsInputAllowed()
     {

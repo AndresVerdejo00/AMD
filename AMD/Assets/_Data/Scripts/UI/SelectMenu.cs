@@ -15,7 +15,6 @@ public class SelectMenu : MonoBehaviour
     [SerializeField]
     private GameObject panelInfo;//panel from menu info
 
-<<<<<<< HEAD
     [SerializeField]
     private Image backgroundImageStart;
     [SerializeField]
@@ -24,13 +23,14 @@ public class SelectMenu : MonoBehaviour
     private Image backgroundImageExit;
     [SerializeField]
     private Image backgroundImagePanelInfo;
+    [SerializeField]
+    private Image backgroundImageBack;
 
-=======
->>>>>>> daf93d0a94171f55369b8b69781508481559ee78
 
     private int selected;//option to manage switch
     private bool canBackToLobby = false;
     private bool isMain = true;//SE TIENE QUE COMPROBAR PARA CAMBIAR EL SELECTED, SOLO SE CAMBIA EN EL MAINPANEL
+    private bool isInInfoPanel = false;
 
     private void Start()
     {
@@ -45,22 +45,30 @@ public class SelectMenu : MonoBehaviour
 
     private void Update()
     {
-<<<<<<< HEAD
         //rellenar barra de carga
         if (PlayerInputManager.Instance.IsClickSpace())
         {
-            switch(selected)
+            switch (selected)
             {
                 case 1:
                     backgroundImageStart.fillAmount += (Time.deltaTime / PlayerInputManager.numLongPresTime);
                     break;
                 case 2:
+                    if (isInInfoPanel)
+                    {
+                        return;
+                    }
                     backgroundImageInfo.fillAmount += (Time.deltaTime / PlayerInputManager.numLongPresTime);
                     break;
                 case 3:
                     backgroundImageExit.fillAmount += (Time.deltaTime / PlayerInputManager.numLongPresTime);
                     break;
-                    
+                case 4:
+                    if (isInInfoPanel)
+                    {
+                        backgroundImageBack.fillAmount += (Time.deltaTime / PlayerInputManager.numLongPresTime);
+                    }
+                    break;
             }
         }
 
@@ -72,66 +80,58 @@ public class SelectMenu : MonoBehaviour
             backgroundImageStart.fillAmount = 0;
             backgroundImageInfo.fillAmount = 0;
             backgroundImageExit.fillAmount = 0;
-=======
-        if (PlayerInputManager.Instance.IsClickSpacePressed() && isMain)
-        {
-            ChangeMenuSelected();
->>>>>>> daf93d0a94171f55369b8b69781508481559ee78
+            backgroundImageBack.fillAmount = 0;
         }
 
 
         if(PlayerInputManager.Instance.IsClickSpaceLongPressed())
         {
-            if(selected == 1)
+            switch (selected)
             {
-                SceneManager.LoadScene(numScene);
-                isMain = false;
-<<<<<<< HEAD
+                case 1:
+                    SceneManager.LoadScene(numScene);
+                    isMain = false;
 
-                backgroundImageStart.fillAmount = 0;
-=======
->>>>>>> daf93d0a94171f55369b8b69781508481559ee78
-            }
+                    backgroundImageStart.fillAmount = 0;
+                    break;
+                case 2:
+                    if (canBackToLobby && !isInInfoPanel)
+                    {
+                        canBackToLobby = false;
+                        //active panels
+                        panelMain.SetActive(!panelMain.activeInHierarchy);
+                        panelInfo.SetActive(!panelInfo.activeInHierarchy);
+                        isMain = false;
+                        backgroundImageInfo.fillAmount = 0;
+                        selected = 4;
+                    }
+                    break;
+                case 3:
+                    Application.Quit();
+                    isMain = false;
 
-            if(selected == 2 && canBackToLobby)
-            {
-                canBackToLobby = false;
-                //active panels
-                panelMain.SetActive(!panelMain.activeInHierarchy);
-                panelInfo.SetActive(!panelInfo.activeInHierarchy);
-                isMain = false;
-<<<<<<< HEAD
+                    backgroundImageExit.fillAmount = 0;
+                    break;
+                case 4:
+                    if (isInInfoPanel)
+                    {
+                        panelMain.SetActive(!panelMain.activeInHierarchy);
+                        panelInfo.SetActive(!panelInfo.activeInHierarchy);
+                        backgroundImageBack.fillAmount = 0;
+                        selected = 2;
+                        isMain = true;
+                    }
+                    break;
 
-                backgroundImageInfo.fillAmount = 0;
-=======
->>>>>>> daf93d0a94171f55369b8b69781508481559ee78
-            }
-
-            if(selected == 3)
-            {
-                Application.Quit();
-                isMain = false;
-<<<<<<< HEAD
-
-                backgroundImageExit.fillAmount = 0;
             }
         }
 
         if (PlayerInputManager.Instance.IsClickSpacePressedUp())
         {
             canBackToLobby = true;
-            backgroundImageStart.fillAmount += (Time.deltaTime / PlayerInputManager.numLongPresTime);
-=======
-            }
+            isInInfoPanel = panelInfo.activeInHierarchy;
         }
-
-        if (PlayerInputManager.Instance.IsClickSpaceUp())
-        {
-            canBackToLobby = true;
->>>>>>> daf93d0a94171f55369b8b69781508481559ee78
-            isMain = true;
-        }
-
+        print(selected);
     }
 
     private void ChangeMenuSelected()

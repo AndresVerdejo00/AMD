@@ -1467,6 +1467,9 @@ PrefabInstance:
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 295168167570430926, guid: 7d17e00ac6e17fe40a6417bae45d3827, type: 3}
       insertIndex: -1
+      addedObject: {fileID: 1007983073186076314}
+    - targetCorrespondingSourceObject: {fileID: 295168167570430926, guid: 7d17e00ac6e17fe40a6417bae45d3827, type: 3}
+      insertIndex: -1
       addedObject: {fileID: 2720840384132337031}
     - targetCorrespondingSourceObject: {fileID: 295168167570430926, guid: 7d17e00ac6e17fe40a6417bae45d3827, type: 3}
       insertIndex: -1
@@ -1474,9 +1477,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 295168167570430926, guid: 7d17e00ac6e17fe40a6417bae45d3827, type: 3}
       insertIndex: -1
       addedObject: {fileID: 3120332383591223480}
-    - targetCorrespondingSourceObject: {fileID: 295168167570430926, guid: 7d17e00ac6e17fe40a6417bae45d3827, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1007983073186076314}
   m_SourcePrefab: {fileID: 100100000, guid: 7d17e00ac6e17fe40a6417bae45d3827, type: 3}
 --- !u!224 &2698252683746116095 stripped
 RectTransform:
